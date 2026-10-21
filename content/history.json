@@ -1,0 +1,30 @@
+{
+  "eyebrow": "El punto de partida",
+  "title": "Todo comienza\ncon una pausa.",
+  "description": "Un espacio personal para observar, experimentar y guardar lo que vale la pena repetir.",
+  "image": {
+    "src": "/media/escritura-1.svg",
+    "alt": "Ilustración editorial de un cuaderno abierto con formas geométricas y una rama"
+  },
+  "caption": "02 — Ideas que encuentran su espacio",
+  "body": "## De una idea a un pequeño ritual\n\nA veces, un proyecto empieza con algo tan sencillo como dejar el teléfono a un lado y abrir una libreta. Este espacio nace de esa idea: darle lugar a lo que suele quedar para después.\n\n**Velsant Self-Care** reúne experimentos personales alrededor del descanso, la creatividad y la vida cotidiana. No hay una fórmula perfecta; hay curiosidad y ganas de empezar.\n\n> No todo tiene que ir más rápido. Algunas cosas necesitan espacio.\n\n### Un archivo que puede cambiar contigo\n\nCada proyecto guarda una intención, una fecha y un recorrido visual. Puedes añadir nuevas ideas, cambiar estas palabras o comenzar otra historia.\n\nEste relato es **contenido de ejemplo para un demo personal**, no la historia institucional de Velsant.",
+  "milestones": [
+    {
+      "year": "01 / Observar",
+      "title": "Escuchar lo cotidiano",
+      "description": "Identificar los pequeños momentos que nos gustaría conservar."
+    },
+    {
+      "year": "02 / Experimentar",
+      "title": "Empezar sin prisa",
+      "description": "Probar una idea sencilla y darle espacio para evolucionar."
+    },
+    {
+      "year": "03 / Documentar",
+      "title": "Guardar el recorrido",
+      "description": "Reunir imágenes y palabras para volver a lo aprendido."
+    }
+  ],
+  "seoTitle": "Historia — Velsant Self-Care",
+  "seoDescription": "La historia de un demo personal que invita a observar, experimentar y documentar pequeños proyectos."
+}

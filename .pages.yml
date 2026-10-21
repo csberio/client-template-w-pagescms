@@ -1,0 +1,389 @@
+# Pages CMS · Fuente del esquema editorial
+media:
+- name: images
+  label: Imágenes
+  input: public/media
+  output: /media
+  extensions:
+  - svg
+  - jpg
+  - jpeg
+  - png
+  - webp
+  - gif
+  - avif
+  rename: safe
+content:
+- name: site
+  label: Ajustes generales
+  type: file
+  path: content/site.json
+  format: json
+  fields:
+  - name: name
+    label: Nombre / marca
+    type: string
+    required: true
+  - name: tagline
+    label: Lema
+    type: string
+    required: true
+  - name: footer
+    label: Texto del pie de página
+    type: string
+    required: true
+  - name: catalogLabel
+    label: 'Menú: proyectos'
+    type: string
+    required: true
+  - name: historyLabel
+    label: 'Menú: historia'
+    type: string
+    required: true
+  - name: homeLabel
+    label: 'Menú: introducción'
+    type: string
+    required: true
+  - name: openLabel
+    label: 'Botón: explorar proyecto'
+    type: string
+    required: true
+  - name: closeLabel
+    label: 'Botón: cerrar'
+    type: string
+    required: true
+  - name: emptyLabel
+    label: Catálogo vacío
+    type: string
+    required: true
+  - name: projectLabel
+    label: 'Etiqueta: proyecto'
+    type: string
+    required: true
+  - name: mainLabel
+    label: 'Etiqueta: imagen principal'
+    type: string
+    required: true
+  - name: secondaryLabel
+    label: 'Etiqueta: imagen secundaria'
+    type: string
+    required: true
+  - name: extraLabel
+    label: 'Etiqueta: imagen extra'
+    type: string
+    required: true
+  - name: skipLabel
+    label: 'Enlace: saltar al contenido'
+    type: string
+    required: true
+  - name: repository
+    label: Repositorio de referencia
+    type: string
+    required: true
+  - name: accent
+    label: Color de acento
+    type: string
+    required: true
+    pattern:
+      regex: ^#[0-9a-fA-F]{6}$
+      message: 'Usa un color HEX de seis dígitos, por ejemplo #0E2A47.'
+  - name: background
+    label: Color de fondo
+    type: string
+    required: true
+    pattern:
+      regex: ^#[0-9a-fA-F]{6}$
+      message: 'Usa un color HEX de seis dígitos, por ejemplo #0E2A47.'
+  - name: ink
+    label: Color de texto
+    type: string
+    required: true
+    pattern:
+      regex: ^#[0-9a-fA-F]{6}$
+      message: 'Usa un color HEX de seis dígitos, por ejemplo #0E2A47.'
+- name: home
+  label: 01 · Introducción
+  type: file
+  path: content/home.json
+  format: json
+  fields:
+  - name: eyebrow
+    label: Texto superior
+    type: string
+    required: true
+  - name: title
+    label: Título
+    type: text
+    required: true
+  - name: description
+    label: Introducción
+    type: rich-text
+    required: true
+    options:
+      format: markdown
+      media: images
+  - name: ctaLabel
+    label: Texto del botón
+    type: string
+    required: true
+  - name: ctaHref
+    label: Destino del botón
+    type: string
+    required: true
+    pattern:
+      regex: ^(/(?!/)|https://|mailto:).+
+      message: Usa una ruta como /proyectos/, https:// o mailto:.
+  - name: image
+    label: Imagen principal
+    type: object
+    required: true
+    fields:
+    - name: src
+      label: Imagen
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      label: Texto alternativo
+      type: string
+      required: true
+      description: Describe lo que aparece en la imagen para lectores de pantalla.
+  - name: caption
+    label: Pie de imagen
+    type: string
+    required: true
+  - name: noteTitle
+    label: Título de la nota
+    type: string
+    required: true
+  - name: note
+    label: Nota inferior
+    type: rich-text
+    required: true
+    options:
+      format: markdown
+      media: images
+  - &id001
+    name: seoTitle
+    label: Título para buscadores
+    type: string
+    required: true
+  - &id002
+    name: seoDescription
+    label: Descripción para buscadores
+    type: text
+    required: true
+- name: history
+  label: 02 · Historia
+  type: file
+  path: content/history.json
+  format: json
+  fields:
+  - name: eyebrow
+    label: Texto superior
+    type: string
+    required: true
+  - name: title
+    label: Título
+    type: text
+    required: true
+  - name: description
+    label: Introducción
+    type: rich-text
+    required: true
+    options:
+      format: markdown
+      media: images
+  - name: image
+    label: Imagen
+    type: object
+    required: true
+    fields:
+    - name: src
+      label: Imagen
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      label: Texto alternativo
+      type: string
+      required: true
+      description: Describe lo que aparece en la imagen para lectores de pantalla.
+  - name: caption
+    label: Pie de imagen
+    type: string
+    required: true
+  - name: body
+    label: Historia
+    type: rich-text
+    required: true
+    options:
+      format: markdown
+      media: images
+  - name: milestones
+    label: Hitos
+    type: object
+    required: false
+    list: true
+    fields:
+    - name: year
+      label: Fecha o etiqueta
+      type: string
+      required: true
+    - name: title
+      label: Título
+      type: string
+      required: true
+    - name: description
+      label: Descripción
+      type: rich-text
+      required: true
+      options:
+        format: markdown
+        media: images
+  - *id001
+  - *id002
+- name: catalog
+  label: 03 · Catálogo
+  type: file
+  path: content/catalog.json
+  format: json
+  fields:
+  - name: eyebrow
+    label: Texto superior
+    type: string
+    required: true
+  - name: title
+    label: Título
+    type: text
+    required: true
+  - name: description
+    label: Introducción
+    type: rich-text
+    required: true
+    options:
+      format: markdown
+      media: images
+  - *id001
+  - *id002
+- name: projects
+  label: Proyectos
+  type: collection
+  path: content/projects
+  format: json
+  filename: '{primary}.json'
+  subfolders: false
+  view:
+    primary: title
+    fields:
+    - title
+    - date
+    - published
+    sort: date
+    order: desc
+  fields:
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: date
+    label: Fecha
+    type: date
+    required: true
+    options:
+      format: yyyy-MM-dd
+  - name: description
+    label: Descripción con formato
+    type: rich-text
+    required: true
+    options:
+      format: markdown
+      media: images
+  - name: published
+    label: Publicado
+    type: boolean
+    required: true
+    default: true
+    description: Desactiva para guardar como borrador.
+  - name: mainImage
+    label: Imagen principal
+    type: object
+    required: true
+    fields:
+    - name: src
+      label: Imagen
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      label: Texto alternativo
+      type: string
+      required: true
+      description: Describe lo que aparece en la imagen para lectores de pantalla.
+  - name: secondaryImage
+    label: Imagen secundaria
+    type: object
+    required: true
+    fields:
+    - name: src
+      label: Imagen
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      label: Texto alternativo
+      type: string
+      required: true
+      description: Describe lo que aparece en la imagen para lectores de pantalla.
+  - name: extra1
+    label: Imagen extra 1
+    type: object
+    required: false
+    fields:
+    - name: src
+      label: Imagen
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      label: Texto alternativo
+      type: string
+      required: true
+      description: Describe lo que aparece en la imagen para lectores de pantalla.
+  - name: extra2
+    label: Imagen extra 2
+    type: object
+    required: false
+    fields:
+    - name: src
+      label: Imagen
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      label: Texto alternativo
+      type: string
+      required: true
+      description: Describe lo que aparece en la imagen para lectores de pantalla.
+  - name: extra3
+    label: Imagen extra 3
+    type: object
+    required: false
+    fields:
+    - name: src
+      label: Imagen
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      label: Texto alternativo
+      type: string
+      required: true
+      description: Describe lo que aparece en la imagen para lectores de pantalla.

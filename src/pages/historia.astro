@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { content, richText } from '../lib/content.mjs';
+const { history } = content;
+---
+<Layout title={history.seoTitle} description={history.seoDescription} active="history">
+  <section class="page-heading wrap"><p class="eyebrow">{history.eyebrow}</p><h1>{history.title}</h1><div class="prose intro" set:html={richText(history.description)} /></section>
+  <section class="story wrap"><figure><img src={history.image.src} alt={history.image.alt} width="1000" height="1100" /><figcaption>{history.caption}</figcaption></figure><div class="prose story-body" set:html={richText(history.body)} /></section>
+  <section class="timeline wrap">{history.milestones.map(m=><article><p class="eyebrow">{m.year}</p><h2>{m.title}</h2><div class="prose" set:html={richText(m.description)} /></article>)}</section>
+</Layout>

@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { content, richText, formatDate } from '../lib/content.mjs';
+const { catalog, projects, site } = content;
+---
+<Layout title={catalog.seoTitle} description={catalog.seoDescription} active="catalog">
+  <section class="page-heading wrap"><p class="eyebrow">{catalog.eyebrow}</p><div class="heading-row"><h1>{catalog.title}</h1><span class="count">{String(projects.length).padStart(2,'0')}</span></div><div class="prose intro" set:html={richText(catalog.description)} /></section>
+  <section class="project-grid wrap" aria-label={site.catalogLabel}>
+    {projects.length===0 && <p class="empty">{site.emptyLabel}</p>}
+    {projects.map((p,index)=><article class="project-card" id={`proyecto-${p.id}`}>
+      <a class="project-image" href={`#detalle-${p.id}`} data-open={`detalle-${p.id}`} aria-label={`${site.openLabel}: ${p.title}`}><img src={p.mainImage.src} alt={p.mainImage.alt} width="1000" height="800" loading="lazy" /><span class="image-arrow" aria-hidden="true">↗</span></a>
+      <div class="project-meta"><span>{site.projectLabel} {String(index+1).padStart(2,'0')}</span><time datetime={p.date}>{formatDate(p.date)}</time></div><h2><a href={`#detalle-${p.id}`} data-open={`detalle-${p.id}`}>{p.title}</a></h2>
+      <details id={`detalle-${p.id}`} class="project-details"><summary>{site.openLabel}</summary><div class="detail-content"><h2>{p.title}</h2><time datetime={p.date}>{formatDate(p.date)}</time><div class="prose" set:html={richText(p.description)} /><div class="detail-gallery">{[p.mainImage,p.secondaryImage,p.extra1,p.extra2,p.extra3].filter(Boolean).map((img,i)=><figure><img src={img.src} alt={img.alt} width="1000" height="800" loading="lazy" /><figcaption>{i===0?site.mainLabel:i===1?site.secondaryLabel:`${site.extraLabel} ${i-1}`}</figcaption></figure>)}</div></div></details>
+    </article>)}
+  </section>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-title">{site.projectLabel}</span><button type="button" data-close>{site.closeLabel}<span aria-hidden="true"> ×</span></button></div><div id="dialog-body"></div></dialog>
+</Layout>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#project-dialog');
+  const body = document.querySelector('#dialog-body');
+  let trigger: HTMLElement | null = null;
+  if (dialog && body && typeof dialog.showModal === 'function') {
+    document.documentElement.classList.add('has-dialog');
+    document.querySelectorAll<HTMLAnchorElement>('[data-open]').forEach(link => link.addEventListener('click',event => {
+      const details=document.getElementById(link.dataset.open!);
+      const detail=details?.querySelector('.detail-content');
+      if (!detail) return;
+      event.preventDefault(); trigger=link;
+      body.replaceChildren(detail.cloneNode(true));
+      const heading=body.querySelector('h2');
+      const label=document.querySelector('#dialog-title');
+      if (label && heading) label.textContent=heading.textContent;
+      dialog.showModal(); dialog.scrollTop=0; document.body.classList.add('modal-open');
+    }));
+    dialog.querySelector('[data-close]')?.addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect(); if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+    dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');body.replaceChildren();trigger?.focus();});
+  }
+</script>

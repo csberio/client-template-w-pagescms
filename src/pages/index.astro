@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { content, richText } from '../lib/content.mjs';
+const { home } = content;
+---
+<Layout title={home.seoTitle} description={home.seoDescription} active="home">
+  <section class="hero wrap">
+    <div class="hero-copy"><p class="eyebrow"><span class="dot"></span>{home.eyebrow}</p><h1>{home.title}</h1><div class="prose intro" set:html={richText(home.description)} /><a class="button" href={home.ctaHref}>{home.ctaLabel}<span aria-hidden="true">↗</span></a></div>
+    <figure class="hero-image"><img src={home.image.src} alt={home.image.alt} width="1000" height="1100" fetchpriority="high" /><figcaption><span>{home.caption}</span><span aria-hidden="true">01 / 03</span></figcaption></figure>
+  </section>
+  <section class="note-section wrap"><p class="eyebrow">{home.noteTitle}</p><div class="prose" set:html={richText(home.note)} /></section>
+</Layout>

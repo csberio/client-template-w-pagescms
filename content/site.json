@@ -1,0 +1,20 @@
+{
+  "name": "Velsant Self-Care",
+  "tagline": "Un espacio para hacer una pausa",
+  "footer": "Velsant · Thoughtfully built. · Puerto Rico · Demo personal",
+  "catalogLabel": "Proyectos",
+  "historyLabel": "Historia",
+  "homeLabel": "Introducción",
+  "openLabel": "Explorar proyecto",
+  "closeLabel": "Cerrar",
+  "emptyLabel": "Este archivo está comenzando. Pronto habrá nuevos proyectos.",
+  "projectLabel": "Proyecto",
+  "mainLabel": "Imagen principal",
+  "secondaryLabel": "Imagen secundaria",
+  "extraLabel": "Imagen extra",
+  "skipLabel": "Saltar al contenido",
+  "repository": "https://github.com/csberio/client-template-w-pagescms",
+  "accent": "#B48E58",
+  "background": "#F7F9FB",
+  "ink": "#0E2A47"
+}

@@ -1,0 +1,16 @@
+{
+  "eyebrow": "Bitácora personal · Puerto Rico",
+  "title": "Menos prisa.\nMás espacio\npara ti.",
+  "description": "Un archivo de pequeños proyectos para reconectar con lo cotidiano. Ideas, pausas y momentos que merecen un lugar propio.",
+  "ctaLabel": "Explorar los proyectos",
+  "ctaHref": "/proyectos/",
+  "image": {
+    "src": "/media/pausa-1.svg",
+    "alt": "Composición ilustrada de un cuaderno, una taza y una rama sobre una mesa clara"
+  },
+  "caption": "01 — El arte de bajar el ritmo",
+  "noteTitle": "Una intención sencilla",
+  "note": "Hacer espacio para lo que nos inspira. **Velsant Self-Care** es un demo personal: los textos, las imágenes y los proyectos son ejemplos que puedes transformar en algo tuyo.",
+  "seoTitle": "Velsant Self-Care — Un espacio para ti",
+  "seoDescription": "Un demo personal de Velsant para explorar pequeños proyectos, historias y momentos cotidianos."
+}

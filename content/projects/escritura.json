@@ -1,0 +1,26 @@
+{
+  "title": "Ideas sobre papel",
+  "date": "2026-10-12",
+  "published": true,
+  "description": "## La intención\n\nUn pequeño archivo de palabras, bocetos y preguntas que todavía no tienen respuesta.\n\n**Un proyecto personal de ejemplo**, creado para explorar cómo documentar una idea con texto y cinco imágenes.\n\n### El recorrido\n\n1. Abrir una página en blanco.\n2. Escribir una idea sin editarla.\n3. Volver otro día con otra mirada.\n\n> Empezar por algo pequeño también cuenta.\n\nPuedes reemplazar esta descripción con tus propios párrafos, listas, enlaces y encabezados.",
+  "mainImage": {
+    "src": "/media/escritura-1.svg",
+    "alt": "Una composición ilustrada de una libreta y figuras sobre papel — vista principal"
+  },
+  "secondaryImage": {
+    "src": "/media/escritura-2.svg",
+    "alt": "Una composición ilustrada de una libreta y figuras sobre papel — vista secundaria"
+  },
+  "extra1": {
+    "src": "/media/escritura-3.svg",
+    "alt": "Una composición ilustrada de una libreta y figuras sobre papel — detalle 1"
+  },
+  "extra2": {
+    "src": "/media/escritura-4.svg",
+    "alt": "Una composición ilustrada de una libreta y figuras sobre papel — detalle 2"
+  },
+  "extra3": {
+    "src": "/media/escritura-5.svg",
+    "alt": "Una composición ilustrada de una libreta y figuras sobre papel — detalle 3"
+  }
+}

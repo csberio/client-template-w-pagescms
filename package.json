@@ -1,0 +1,27 @@
+{
+  "name": "velsant-self-care",
+  "version": "1.0.0",
+  "description": "Demo personal est\u00e1tico con Astro y Pages CMS",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/validate.mjs && astro build",
+    "preview": "astro preview",
+    "test": "node --test scripts/content.test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@fontsource/space-grotesk": "^5.3.0",
+    "@fontsource/syne": "^5.3.0",
+    "astro": "^7.4.1",
+    "marked": "^18.1.1",
+    "sanitize-html": "^2.18.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "yaml": "^2.9.1"
+  },
+  "private": true
+}

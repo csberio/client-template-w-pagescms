@@ -1,0 +1,26 @@
+{
+  "title": "Encontrar la luz",
+  "date": "2026-10-05",
+  "published": true,
+  "description": "## La intención\n\nMirar un rincón conocido como si fuera la primera vez.\n\n**Un proyecto personal de ejemplo**, creado para explorar cómo documentar una idea con texto y cinco imágenes.\n\n### El recorrido\n\n- Buscar la luz de la mañana.\n- Observar las sombras.\n- Guardar un detalle del recorrido.\n\n> Empezar por algo pequeño también cuenta.\n\nPuedes reemplazar esta descripción con tus propios párrafos, listas, enlaces y encabezados.",
+  "mainImage": {
+    "src": "/media/luz-1.svg",
+    "alt": "Una ilustración de luz entrando por una ventana y una planta — vista principal"
+  },
+  "secondaryImage": {
+    "src": "/media/luz-2.svg",
+    "alt": "Una ilustración de luz entrando por una ventana y una planta — vista secundaria"
+  },
+  "extra1": {
+    "src": "/media/luz-3.svg",
+    "alt": "Una ilustración de luz entrando por una ventana y una planta — detalle 1"
+  },
+  "extra2": {
+    "src": "/media/luz-4.svg",
+    "alt": "Una ilustración de luz entrando por una ventana y una planta — detalle 2"
+  },
+  "extra3": {
+    "src": "/media/luz-5.svg",
+    "alt": "Una ilustración de luz entrando por una ventana y una planta — detalle 3"
+  }
+}

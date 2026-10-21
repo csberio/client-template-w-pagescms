@@ -1,0 +1,26 @@
+{
+  "title": "El ritual de la pausa",
+  "date": "2026-10-18",
+  "published": true,
+  "description": "## La intención\n\nReservar unos minutos para disfrutar un momento sin distracciones.\n\n**Un proyecto personal de ejemplo**, creado para explorar cómo documentar una idea con texto y cinco imágenes.\n\n### El recorrido\n\n- Preparar un espacio tranquilo.\n- Dejar las notificaciones para después.\n- Observar lo que ocurre alrededor.\n\n> Empezar por algo pequeño también cuenta.\n\nPuedes reemplazar esta descripción con tus propios párrafos, listas, enlaces y encabezados.",
+  "mainImage": {
+    "src": "/media/pausa-1.svg",
+    "alt": "Una composición ilustrada con taza, cuaderno y rama — vista principal"
+  },
+  "secondaryImage": {
+    "src": "/media/pausa-2.svg",
+    "alt": "Una composición ilustrada con taza, cuaderno y rama — vista secundaria"
+  },
+  "extra1": {
+    "src": "/media/pausa-3.svg",
+    "alt": "Una composición ilustrada con taza, cuaderno y rama — detalle 1"
+  },
+  "extra2": {
+    "src": "/media/pausa-4.svg",
+    "alt": "Una composición ilustrada con taza, cuaderno y rama — detalle 2"
+  },
+  "extra3": {
+    "src": "/media/pausa-5.svg",
+    "alt": "Una composición ilustrada con taza, cuaderno y rama — detalle 3"
+  }
+}
